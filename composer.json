@@ -1,0 +1,54 @@
+{
+    "name": "orkhanahmadov/laravel-commentable",
+    "description": "Laravel commentable model",
+    "keywords": [
+        "orkhanahmadov",
+        "laravel-commentable"
+    ],
+    "homepage": "https://github.com/orkhanahmadov/laravel-commentable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Orkhan Ahmadov",
+            "email": "ahmadov90@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orkhanahmadov\\LaravelCommentable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orkhanahmadov\\LaravelCommentable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Orkhanahmadov\\LaravelCommentable\\LaravelCommentableServiceProvider"
+            ],
+            "aliases": {
+                "LaravelCommentable": "Orkhanahmadov\\LaravelCommentable\\LaravelCommentableFacade"
+            }
+        }
+    }
+}
