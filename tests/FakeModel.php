@@ -8,4 +8,8 @@ use Orkhanahmadov\LaravelCommentable\Commentable;
 class FakeModel extends Model
 {
     use Commentable;
+
+    public $timestamps = false;
+
+    protected $guarded = [];
 }

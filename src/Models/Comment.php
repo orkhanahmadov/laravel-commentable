@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    /**
+     * Comment constructor.
+     *
+     * @param array $attributes
+     */
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
 
-        $this->setTable(config('comments.table_name'));
+        $this->setTable(config('commentable.table_name'));
     }
 }

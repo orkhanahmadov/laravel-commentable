@@ -16,7 +16,7 @@ class TestCase extends Orchestra
      *
      * @return array
      */
-    protected function getApplicationProviders($app)
+    protected function getPackageProviders($app)
     {
         return [
             LaravelCommentableServiceProvider::class,

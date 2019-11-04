@@ -13,7 +13,7 @@ class CommentTest extends TestCase
         $comment1 = new Comment();
         $this->assertSame('comments', $comment1->getTable());
 
-        Config::set('comments.table_name', 'something_new');
+        Config::set('commentable.table_name', 'something_new');
         $comment2 = new Comment();
         $this->assertSame('something_new', $comment2->getTable());
     }
