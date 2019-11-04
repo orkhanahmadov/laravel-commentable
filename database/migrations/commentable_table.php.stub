@@ -13,7 +13,9 @@ class CreateCommentableTable extends Migration
     {
         Schema::create(config('commentable.table_name'), function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('code', 3)->unique();
+            $table->morphs('commentable');
+            $table->text('comment');
+            $table->timestamps();
         });
     }
 
