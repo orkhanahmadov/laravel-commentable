@@ -3,6 +3,10 @@
     "description": "Laravel commentable model",
     "keywords": [
         "orkhanahmadov",
+        "laravel",
+        "comments",
+        "eloquent",
+        "model",
         "laravel-commentable"
     ],
     "homepage": "https://github.com/orkhanahmadov/laravel-commentable",

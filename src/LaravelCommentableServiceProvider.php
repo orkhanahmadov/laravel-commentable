@@ -13,7 +13,7 @@ class LaravelCommentableServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('comments.php'),
+                __DIR__ . '/../config/config.php' => config_path('comments.php'),
             ], 'config');
         }
     }
@@ -23,6 +23,6 @@ class LaravelCommentableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'comments');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'comments');
     }
 }
