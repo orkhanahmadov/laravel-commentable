@@ -27,6 +27,16 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
+        DB::statement('
+            CREATE TABLE comments (
+                id INT,
+                commentable_id INT,
+                commentable_type VARCHAR,
+                comment VARCHAR,
+                updated_at DATE,
+                created_at DATE
+            );');
+
         DB::statement('CREATE TABLE fake_models (id INT, name VARCHAR);');
     }
 }
