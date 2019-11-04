@@ -10,4 +10,13 @@ trait Commentable
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
+    public function addComment(string $comment): Comment
+    {
+        return $this->comments()->create([
+            'comment' => $comment,
+            'ip_address' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+        ]);
+    }
 }
