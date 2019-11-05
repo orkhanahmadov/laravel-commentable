@@ -16,13 +16,25 @@ class CommentableTraitTest extends TestCase
         $this->assertSame('my comment', $model->comments->first()->comment);
     }
 
-    public function testAddComment()
+    public function testComment()
     {
         $model = FakeModel::create();
-        $model->addComment('new comment');
+        $model->comment('new comment');
 
         $this->assertCount(1, $model->comments);
         $this->assertInstanceOf(Comment::class, $model->comments->first());
         $this->assertSame('new comment', $model->comments->first()->comment);
+    }
+
+    public function testCommentAs()
+    {
+        $model = FakeModel::create();
+        $user = FakeModel::create();
+        $model->commentAs($user, 'new comment');
+
+        $this->assertCount(1, $model->comments);
+        $this->assertInstanceOf(Comment::class, $model->comments->first());
+        $this->assertSame('new comment', $model->comments->first()->comment);
+        $this->assertSame($user->id, $model->comments->first()->user_id);
     }
 }

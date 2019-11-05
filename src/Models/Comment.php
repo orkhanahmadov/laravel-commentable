@@ -8,6 +8,8 @@ class Comment extends Model
 {
     protected $fillable = [
         'comment',
+        'ip_address',
+        'user_agent',
     ];
 
     /**

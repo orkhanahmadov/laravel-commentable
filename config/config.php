@@ -4,10 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Comments table name
+    | Table name
     |--------------------------------------------------------------------------
     |
-    | Define with table name should be used for comments table.
+    | Define which table name should be used for comments table.
     |
     */
 
