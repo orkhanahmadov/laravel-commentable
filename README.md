@@ -1,11 +1,6 @@
-# Very short description of the package
+# Laravel commentable model
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/orkhanahmadov/laravel-commentable.svg?style=flat-square)](https://packagist.org/packages/orkhanahmadov/laravel-commentable)
-[![Build Status](https://img.shields.io/travis/orkhanahmadov/laravel-commentable/master.svg?style=flat-square)](https://travis-ci.org/orkhanahmadov/laravel-commentable)
-[![Quality Score](https://img.shields.io/scrutinizer/g/orkhanahmadov/laravel-commentable.svg?style=flat-square)](https://scrutinizer-ci.com/g/orkhanahmadov/laravel-commentable)
-[![Total Downloads](https://img.shields.io/packagist/dt/orkhanahmadov/laravel-commentable.svg?style=flat-square)](https://packagist.org/packages/orkhanahmadov/laravel-commentable)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package provides adding comments to any of your existing Eloquent models.
 
 ## Installation
 
