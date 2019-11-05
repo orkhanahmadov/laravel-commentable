@@ -21,11 +21,47 @@ You can install the package via composer:
 composer require orkhanahmadov/laravel-commentable
 ```
 
+Publish migration and config files:
+
+```bash
+php artisan vendor:publish --provider="Orkhanahmadov\LaravelCommentable\LaravelCommentableServiceProvider"
+```
+
+## Config
+
+Config file contains following settings:
+- `table_name` - here you are set table name for migration. Default is "comments".
+
 ## Usage
 
+Use `Orkhanahmadov\LaravelCommentable\Commentable` trait in any of your existing Eloquent model to make it commentable.
+
 ``` php
-// Usage description here
+use Illuminate\Database\Eloquent\Model;
+use Orkhanahmadov\LaravelCommentable\Commentable;
+
+class Post extends Model
+{
+    use Commentable;
+}
 ```
+
+To add a comment to your model call `comment()` method from model instance.
+
+``` php
+$post = Post::find(1);
+$post->comment('Great post, thanks for sharing!');
+```
+
+To add a comment as a user call `commentAs()` method from model instance.
+
+``` php
+$post = Post::find(1);
+$user = User::find(5);
+$post->commentAs($user, 'Great post, thanks for sharing!');
+```
+
+Each comment also saves IP address, User-Agent from request.
 
 ### Testing
 
