@@ -14,6 +14,7 @@ class CreateCommentableTable extends Migration
         Schema::create(config('commentable.table_name'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->morphs('commentable');
+            $table->unsignedBigInteger('user_id')->index()->nullable();
             $table->text('comment');
             $table->ipAddress('ip_address')->nullable();
             $table->string('user_agent')->nullable();

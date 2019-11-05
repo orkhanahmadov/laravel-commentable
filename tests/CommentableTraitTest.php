@@ -35,6 +35,6 @@ class CommentableTraitTest extends TestCase
         $this->assertCount(1, $model->comments);
         $this->assertInstanceOf(Comment::class, $model->comments->first());
         $this->assertSame('new comment', $model->comments->first()->comment);
-        $this->assertSame($user->id, $model->comments->first()->user_id);
+        $this->assertEquals($user->id, $model->comments->first()->user_id);
     }
 }
