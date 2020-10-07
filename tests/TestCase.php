@@ -39,7 +39,7 @@ class TestCase extends Orchestra
      */
     protected function setUpDatabase($app)
     {
-        include_once __DIR__.'/../database/migrations/commentable_table.php.stub';
+        include_once __DIR__ . '/../database/migrations/commentable_table.php.stub';
         (new \CreateCommentableTable())->up();
     }
 }
