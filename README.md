@@ -13,6 +13,11 @@
 
 This package provides adding comments to any of your existing Eloquent models.
 
+## Requirements
+
+- PHP 7.2 or higher
+- Laravel 6 or higher
+
 ## Installation
 
 You can install the package via composer:
